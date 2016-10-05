@@ -4,7 +4,7 @@
 require 'wikidata/fetcher'
 
 names = EveryPolitician::Wikidata.morph_wikinames(source: 'tmtmtmtm/italy-legislature-XVII-wikipedia', column: 'wikiname')
-by_cat = WikiData::Category.new( 'Categoria:Deputati della XVII Legislatura della Repubblica Italiana', 'it').member_titles
+by_cat = WikiData::Category.new( 'Categoria:Deputati della XVII legislatura della Repubblica Italiana', 'it').member_titles
 
 abort "No members in category" if by_cat.empty?
 
