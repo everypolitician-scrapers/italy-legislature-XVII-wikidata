@@ -8,4 +8,4 @@ by_cat = WikiData::Category.new( 'Categoria:Deputati della XVII legislatura dell
 
 abort "No members in category" if by_cat.empty?
 
-EveryPolitician::Wikidata.scrape_wikidata(names: { it: names | by_cat }, batch_size: 100)
+EveryPolitician::Wikidata.scrape_wikidata(names: { it: names | by_cat })
