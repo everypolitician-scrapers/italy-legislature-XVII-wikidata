@@ -7,4 +7,6 @@ require 'wikidata/fetcher'
 by_cat = WikiData::Category.new( 'Categoria:Deputati della XVII legislatura della Repubblica Italiana', 'it').member_titles
 abort "No members in category" if by_cat.empty?
 
-EveryPolitician::Wikidata.scrape_wikidata(names: { it: by_cat })
+extras = %w(Q28070590)
+
+EveryPolitician::Wikidata.scrape_wikidata(ids: extras, names: { it: by_cat })
